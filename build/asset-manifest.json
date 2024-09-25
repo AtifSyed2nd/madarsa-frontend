@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.65781060.css",
-    "main.js": "/static/js/main.5de0ecf9.js",
+    "main.js": "/static/js/main.cea3ebef.js",
     "static/js/453.4227a921.chunk.js": "/static/js/453.4227a921.chunk.js",
     "static/media/Maulana-Md-Ghalib_Teacher_2001-present.jpg": "/static/media/Maulana-Md-Ghalib_Teacher_2001-present.a7049fe99dd6ab0c5a42.jpg",
     "static/media/Mufti-Md-Aamir_Secretary_2018-present.jpg": "/static/media/Mufti-Md-Aamir_Secretary_2018-present.9160cc015bfbad178083.jpg",
@@ -77,11 +77,11 @@
     "static/media/Campaign.svg": "/static/media/Campaign.0e445f5947037fc8bcaafffa0b113f88.svg",
     "static/media/Aalim.svg": "/static/media/Aalim.70a80f4da2e839a3b387de87f57ef3d7.svg",
     "main.65781060.css.map": "/static/css/main.65781060.css.map",
-    "main.5de0ecf9.js.map": "/static/js/main.5de0ecf9.js.map",
+    "main.cea3ebef.js.map": "/static/js/main.cea3ebef.js.map",
     "453.4227a921.chunk.js.map": "/static/js/453.4227a921.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65781060.css",
-    "static/js/main.5de0ecf9.js"
+    "static/js/main.cea3ebef.js"
   ]
 }

@@ -10,7 +10,7 @@ import {
   IoHeartHalfSharp,
   IoTimeOutline,
 } from "react-icons/io5";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Image from "../../Constants/Image";
 import {
   PiCoins,
@@ -248,13 +248,12 @@ function Index() {
         <NavbarCustom />
         <div className='w-[79.17%] my-28 max-tablet:my-20 m-auto max-desktop:w-[94%] max-tablet:w-[97%]'>
           <div className='flex items-center mb-[40px] max-desktop:mb-[24px] max-tablet:mb-[16]'>
+            <Link to='/account/Ongoing-Campaigns' >
             <IoArrowBackSharp
-              onClick={() => {
-                navigate(-1);
-              }}
+              
               color={`${theme.palette.green.main}`}
               className='size-10 p-1 max-desktop:size-9 max-tablet:size-7 hover:bg-slate-300 me-2 bg-slate-200 rounded-full'
-            />
+            /></Link>
             <p className='font-roboto font-normal text-[36px] max-desktop:text-[28px] max-tablet:text-[1.5rem]'>
               Campaigns
             </p>
