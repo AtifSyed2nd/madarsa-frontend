@@ -107,6 +107,10 @@ const TemporaryDrawer = styled(MuiDrawer)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1, // Ensure it appears above other elements
 }));
 
+
+
+
+
 let menu = [
   {
     name: "Dashboard",
@@ -156,6 +160,8 @@ export default function MiniDrawer({ children }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const [userData, setUserData] = React.useState({})
+
 
   // Extract the last path segment to use as the title
   const title = React.useMemo(() => {
@@ -178,6 +184,15 @@ export default function MiniDrawer({ children }) {
   const handleMobileDrawerClose = () => {
     setMobileOpen(false);
   };
+
+  React.useEffect(() => {
+    setUserData(JSON.parse(localStorage.getItem("user_obj")))
+
+  }, []);
+
+  console.log("user", userData);
+
+
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -310,7 +325,7 @@ export default function MiniDrawer({ children }) {
               color={themeMui.palette.text.main}
               sx={{ fontSize: "0.9rem", fontWeight: 500 }}
             >
-              John Smith
+              {userData.username}
             </Typography>
             <Typography
               className='email'
@@ -320,7 +335,7 @@ export default function MiniDrawer({ children }) {
                 color: themeMui.palette.text.main,
               }}
             >
-              johnsmith@mail.com
+              {userData.email}
             </Typography>
           </Box>
           <AvatarDropDown bgcolor={`#21678d`} logout={true} />
@@ -457,7 +472,7 @@ export default function MiniDrawer({ children }) {
               color={colors.text.dark}
               sx={{ fontSize: "0.9rem", fontWeight: 500 }}
             >
-              John Smith
+              J{userData.username}
             </Typography>
             <Typography
               className='email'
@@ -467,7 +482,7 @@ export default function MiniDrawer({ children }) {
                 color: colors.text.dark,
               }}
             >
-              johnsmith@mail.com
+              {userData.email}
             </Typography>
           </Box>
         </Box>

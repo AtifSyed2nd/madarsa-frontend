@@ -54,12 +54,12 @@ function MainContent() {
     {
       DashBoardImg: Image.Hafeez,
       DashBoardTotal: stats?.Total_Current_Hafiz,
-      DashBoardText: "Total Hafeez",
+      DashBoardText: "Total Hafiz",
     },
     {
       DashBoardImg: Image.Aalim,
       DashBoardTotal: stats?.Total_Current_Alim,
-      DashBoardText: "Total Aalim ",
+      DashBoardText: "Total Alim ",
     },
     {
       DashBoardImg: Image.calender,
@@ -118,7 +118,7 @@ function MainContent() {
       <Grid container spacing={4}>
         {dashboards.map((item, index) => {
           return (
-            <Grid item xs={12} sm={6} xl={3}>
+            <Grid item xs={12} sm={6} lg={4} xl={3}>
               <Paper
                 elevation={9}
                 sx={{
@@ -127,27 +127,28 @@ function MainContent() {
                   flexDirection: "row",
                   justifyContent: "space-evenly",
                   alignItems: "center",
+                  height: "full",
                 }}
               >
                 <img src={item.DashBoardImg} alt='' />
-                <Box>
+                <Box sx={{ width: 3/5 }}>
                   <Typography
-                    variant='h4'
+                    variant='h5'
                     sx={{
                       typography: {
                         xs: "subtitle1",
-                        md: "h5",
+                        md: "h6",
                       },
                     }}
                   >
                     {item.DashBoardText}
                   </Typography>
                   <Typography
-                    variant='h4'
+                    variant='h5'
                     sx={{
                       typography: {
                         xs: "subtitle1",
-                        md: "h5",
+                        md: "h6",
                       },
                     }}
                   >
@@ -178,6 +179,8 @@ function MainContent() {
             </Grid>
           </Paper>
         </Grid> */}
+
+{/*         
         <Grid item xs={12} lg={6}>
           <Paper
             elevation={6}
@@ -204,7 +207,9 @@ function MainContent() {
               </LineChart>
             </ResponsiveContainer>
           </Paper>
-        </Grid>
+        </Grid> */}
+
+{/*         
         <Grid item xs={12} lg={6}>
           <Paper
             elevation={6}
@@ -226,7 +231,8 @@ function MainContent() {
               </BarChart>
             </ResponsiveContainer>
           </Paper>
-        </Grid>
+        </Grid> */}
+        
       </Grid>
     </Box>
   );

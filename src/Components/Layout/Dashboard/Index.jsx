@@ -21,12 +21,12 @@ const Dashboard = () => {
     {
       DashBoardImg: Image.Hafeez,
       DashBoardTotal: stats?.Total_Current_Hafiz,
-      DashBoardText: "Total Hafeez",
+      DashBoardText: "Total Hafiz",
     },
     {
       DashBoardImg: Image.Aalim,
       DashBoardTotal: stats?.Total_Current_Alim,
-      DashBoardText: "Total Aalim ",
+      DashBoardText: "Total Alim ",
     },
     {
       DashBoardImg: Image.calender,

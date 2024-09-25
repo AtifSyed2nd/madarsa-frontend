@@ -47,7 +47,7 @@ function Index() {
   };
 
   const columns = [
-    { field: "stat_id", headerName: "ID", width: 70 },
+    // { field: "stat_id", headerName: "ID", width: 70 },
     { field: "stat_english_title", headerName: "English Title", width: 130 },
     {
       field: "stat_urdu_title",

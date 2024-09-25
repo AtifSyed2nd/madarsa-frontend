@@ -63,10 +63,9 @@ function Index() {
   };
 
   const columns = [
-    { field: "user_id", headerName: "ID", width: 70 },
-    { field: "username", headerName: "User Name", width: 130 },
-    { field: "contact_no", headerName: "Contact No", width: 130 },
-    { field: "email", headerName: "Email", width: 130 },
+    { field: "username", headerName: "User Name" },
+    { field: "contact_no", headerName: "Contact No" },
+    { field: "email", headerName: "Email" },
 
     // {
     //   field: "is_active",

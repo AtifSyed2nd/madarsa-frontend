@@ -40,14 +40,26 @@ function Index() {
       id: item.category_id,
       category_id: item.category_id,
       category_title: item.category_title,
+      image: item.image,
       is_active: item.is_active,
       createdAt: new Date(item.createdAt).toLocaleDateString(),
     }));
   };
 
   const columns = [
-    { field: "category_id", headerName: "ID", width: 70 },
+    // { field: "category_id", headerName: "ID", width: 70 },
     { field: "category_title", headerName: "Title", width: 130 },
+    {
+      field: "image",
+      headerName: "Image",
+      width: 130,
+      renderCell: (params) => (
+        <img
+          className='bg-white py-1 px-2 rounded-md max-h-12 '
+          src={process.env.REACT_APP_FE_URL + params.value}
+        />
+      ),
+    },
     {
       field: "is_active",
       headerName: "Status",

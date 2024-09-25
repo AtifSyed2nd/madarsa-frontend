@@ -28,8 +28,11 @@ function Index() {
       campaign_id: item.campaign_id,
       campaign_name: item.campaign_name,
       campaign_status: item.campaign_status,
-      createdAt: new Date(item.createdAt).toLocaleDateString(),
+      category: item.categories.category_title,
+      createdAt: new Date(item.campaign_created_at).toLocaleDateString(),
+      target_date: new Date(item.target_date).toLocaleDateString(),
       target_amount: item.target_amount,
+      fund_raised: item.fund_raised,
     }));
   };
 
@@ -68,7 +71,7 @@ function Index() {
   };
 
   const columns = [
-    { field: "campaign_id", headerName: "ID", width: 70 },
+    // { field: "campaign_id", headerName: "ID", width: 70 },
     {
       field: "campaign_name",
       headerName: "Title",
@@ -139,14 +142,33 @@ function Index() {
       },
     },
     {
+      field: "category",
+      headerName: "Category",
+      type: "string",
+      width: 90,
+    },
+    {
       field: "createdAt",
-      headerName: "Date",
+      headerName: "Created Date",
+      type: "string",
+      width: 90,
+    },
+
+    {
+      field: "target_date",
+      headerName: "Target Date",
       type: "string",
       width: 90,
     },
     {
       field: "target_amount",
       headerName: "Goal Amount",
+      description: "This column has a value getter and is not sortable.",
+      width: 160,
+    },
+    {
+      field: "fund_raised",
+      headerName: "Raised Amount",
       description: "This column has a value getter and is not sortable.",
       width: 160,
     },

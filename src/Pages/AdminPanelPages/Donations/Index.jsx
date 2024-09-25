@@ -40,17 +40,17 @@ function Index() {
         id: item.donation_id || `unique-${index}`,
         donation_id: item.donation_id,
         donor_name: item.donor_name,
+        donor_email: item.donor_email,
         isPaid: item.isPaid,
-        donation_date: item.exp_created_at
-          ? new Date(item.exp_created_at).toLocaleDateString()
-          : "N/A",
+        donation_date: new Date(item.donation_date).toLocaleDateString(),
         donation_amount: item.donation_amount,
       }));
   };
 
   const columns = [
     { field: "donation_id", headerName: "ID", width: 70 },
-    { field: "donor_name", headerName: "Title", width: 130 },
+    { field: "donor_name", headerName: "Name", width: 130 },
+    { field: "donor_email", headerName: "Email", width: 130 },
     {
       field: "isPaid",
       headerName: "Status",

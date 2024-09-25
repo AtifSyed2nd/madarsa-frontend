@@ -34,6 +34,29 @@ function EditGallery() {
   const { mutate } = useCreateOrUpdate({
     url: `/records/images/${id}/nt/`,
     method: "put",
+    onSuccess: (response) => {
+      addAlert(
+        "Update Gallery successfully!",
+        "success",
+        {
+          vertical: "top",
+          horizontal: "center",
+        },
+        3000
+      );
+      navigate(-1);
+    },
+    onError: (error) => {
+      addAlert(
+        `${error}error`,
+        "error",
+        {
+          vertical: "top",
+          horizontal: "center",
+        },
+        3000
+      );
+    },
   });
 
   const initialValues = {

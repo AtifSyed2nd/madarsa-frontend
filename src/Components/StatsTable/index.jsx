@@ -113,12 +113,7 @@ const Index = ({
           >
             No data available
           </Typography>
-          <img
-            src="https://banner2.cleanpng.com/20180519/kho/avq1vlhqt.webp" // Replace with the path to your image
-            alt="No data"
-            className="bg-blend-color-burn"
-            style={{ marginTop: "16px", maxWidth: "100%", height: "auto" }}
-          />
+          <h6 className="text-9xl text-gray-500 ">404</h6>
         </Box>
       )}
     </Box>

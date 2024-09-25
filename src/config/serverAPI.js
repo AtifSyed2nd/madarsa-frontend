@@ -8,7 +8,7 @@ console.log('Backend URL:', backendUrl);
 
 const serverAPI =  axios.create({
     baseURL: `${backendUrl}`,
-    // baseURL: `http://192.168.1.34:8000`,
+    // baseURL: `http://127.0.0.1:8000`,
   });
 
   

@@ -42,7 +42,6 @@ function Index() {
   };
 
   const columns = [
-    { field: "image_id", headerName: "ID", width: 70 },
     { field: "image_title", headerName: "Title", width: 130 },
     {
       field: "createdAt",
