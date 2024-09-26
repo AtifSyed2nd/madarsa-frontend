@@ -190,7 +190,7 @@ export default function MiniDrawer({ children }) {
 
   }, []);
 
-  console.log("user", userData);
+  console.log("user", );
 
 
 
@@ -447,45 +447,7 @@ export default function MiniDrawer({ children }) {
             </NavLink>
           ))}
         </List>
-        <Box
-          sx={{
-            background: colors.text.main,
-            py: 1,
-            pl: 1,
-            display: { xs: "flex", sm: "flex", md: "none" },
-            width: "100%",
-            position: "relative",
-            zIndex: 1200, // Ensure it appears above other elements
-          }}
-          display={"flex"}
-          flexDirection={"row"}
-          gap={2}
-          mr={5}
-          alignItems={"center"}
-          justifyContent={"start"}
-        >
-          <AvatarDropDown bgcolor={`${colors.primary.light}`} logout={true} />
-
-          <Box display={"flex"} flexDirection={"column"} alignItems={"start"}>
-            <Typography
-              className='username'
-              color={colors.text.dark}
-              sx={{ fontSize: "0.9rem", fontWeight: 500 }}
-            >
-              J{userData.username}
-            </Typography>
-            <Typography
-              className='email'
-              sx={{
-                fontSize: "0.6rem",
-                fontWeight: 400,
-                color: colors.text.dark,
-              }}
-            >
-              {userData.email}
-            </Typography>
-          </Box>
-        </Box>
+        
       </Drawer>
       <TemporaryDrawer
         variant='temporary'
@@ -584,6 +546,45 @@ export default function MiniDrawer({ children }) {
             </NavLink>
           ))}
         </List>
+        <Box
+          sx={{
+            background: colors.text.main,
+            py: 1,
+            pl: 1,
+            display: { xs: "flex", sm: "flex", md: "none" },
+            width: "100%",
+            position: "relative",
+            zIndex: 1200, // Ensure it appears above other elements
+          }}
+          display={"flex"}
+          flexDirection={"row"}
+          gap={2}
+          mr={5}
+          alignItems={"center"}
+          justifyContent={"start"}
+        >
+          <AvatarDropDown bgcolor={`${colors.primary.light}`} logout={true} />
+
+          <Box display={"flex"} flexDirection={"column"} alignItems={"start"}>
+            <Typography
+              className='username'
+              color={colors.text.dark}
+              sx={{ fontSize: "0.9rem", fontWeight: 500 }}
+            >
+              J{userData.username}
+            </Typography>
+            <Typography
+              className='email'
+              sx={{
+                fontSize: "0.6rem",
+                fontWeight: 400,
+                color: colors.text.dark,
+              }}
+            >
+              {userData.email}
+            </Typography>
+          </Box>
+        </Box>
       </TemporaryDrawer>
       <Box
         component='main'
