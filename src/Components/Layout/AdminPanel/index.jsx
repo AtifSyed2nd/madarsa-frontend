@@ -571,7 +571,7 @@ export default function MiniDrawer({ children }) {
               color={colors.text.dark}
               sx={{ fontSize: "0.9rem", fontWeight: 500 }}
             >
-              J{userData.username}
+              {userData.username}
             </Typography>
             <Typography
               className='email'
